@@ -33,7 +33,7 @@ const sendSlackMessage = async (formData: FormData) => {
 
 const sendConfirmationEmail = async (senderEmail: string, name: string) => {
   const subject = "Thank you from CodeBox";
-  const text = `Thanks ${name} for your interest in CodeBox we'll get back to you shortly`;
+  const text = `Thanks ${name} for your interest in CodeBox, we'll get back to you shortly!`;
   await sendEmail({ to: senderEmail, subject, text });
 };
 
@@ -41,7 +41,7 @@ const sendEmailToCompany = async (formData: FormData) => {
   const subject = "New landing page form submission";
   const text = `
     name: ${formData.name}
-    email: ${formData.name}
+    email: ${formData.email}
     favourite source control tool: ${formData.favSourceControlTool}
     team size: ${formData.teamSize}
   `;
