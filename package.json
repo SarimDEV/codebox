@@ -1,0 +1,17 @@
+{
+  "name": "codebox",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start-backend": "cd api && npm run dev",
+    "start-frontend": "cd frontend && npm run start",
+    "start": "concurrently \"npm run start-backend\" \"npm run start-frontend\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^6.2.1"
+  }
+}
